@@ -1,48 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Previsão do tempo ☀🌧</title>
     <link rel="stylesheet" href="/static/tempo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+
 <body>
-    <select name="" id="">
-        <option value="">SP</option>
-        <option value="">RJ</option>
-        <option value="">MG</option>
-    </select>
-    <img src="" alt="">
-    <div>
-        <h1 id="">SP- São Paulo</h1>
-        <div>
-            <img src="" alt="">
-            <p id="tempo">27°</p>
-            <p id="clima">chuvoso</p>
+    <div class="container">
+        <div class="form">
+            <i class="bi bi-geo-alt-fill"></i>
+            <label for="">Escolha a cidade: </label>
+            <select name="" id="">
+                <option value="">SP</option>
+                <option value="">RJ</option>
+                <option value="">MG</option>
+            </select>
+            <button type="submit"><i class="bi bi-search"></i></button>
         </div>
-        <div>                
-            <div>
-                <img src="" alt="">
-                <h2>temp.max</h2>
-                <p id="clima-max">30°</p>
+        <div class="weather">
+            <h1 id="nome">São Paulo</h1>
+            <div class="tempo">
+                <div>
+                    <img src="" alt="">
+                </div>
+                <div>
+                    <p id="tempo_valor">29 <sup>C°</sup></p>
+                    <p id="clima">chuvoso</p>
+                </div>
             </div>
-            <div>
-                <img src="" alt="">
-                <h2>temp.min</h2>
-                <p id="clima-min">30°</p>
-            </div>
-            <div>
-                <img src="" alt="">
-                <h2>umidade</h2>
-                <p id="umidade">30%</p>
-            </div>
-            <div>
-                <img src="" alt="">
-                <h2>uv</h2>
-                <p id="uv">30%</p>
+            <div class="infos">
+                <div class="info">
+                    <i class="bi bi-thermometer-sun"></i>
+                    <div>
+                        <h2>temp.max</h2>
+                        <p id="clima-max">30<sup>C°</sup></p>
+                    </div>
+                </div>
+                <div class="info">
+                    <i class="bi bi-thermometer-snow"></i>
+                    <div>
+                        <h2>temp.min</h2>
+                        <p id="clima-min">30<sup>C°</sup></p>
+                    </div>
+                </div>
+                <div class="info">
+                    <i class="bi bi-droplet-fill"></i>
+                    <div>
+                        <h2>umidade</h2>
+                        <p id="umidade">30%</p>
+                    </div>
+                </div>
+                <div class="info">
+                    <i class="bi bi-cloud-haze2"></i>
+                    <div>
+                        <h2>vento</h2>
+                        <p id="vento">30%</p>
+                    </div>
+                </div>
             </div>
         </div>
-        
     </div>
 </body>
+
 </html>

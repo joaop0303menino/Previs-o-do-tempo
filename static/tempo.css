@@ -1,7 +1,100 @@
 *{
+    font-family:Arial, Helvetica, sans-serif;
     padding: 0;
     margin: 0;
     overflow: 0;
-    background-color: aqua;
 }
 
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#486bdd,#3b5ae2);
+}
+
+
+.container{
+    background-color: beige;
+    border-radius: 20px;
+    padding: 18px;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #636363;
+    border-radius: 10px;
+    padding: 4px 12px;
+}
+
+.form select{
+    border: none;
+    background-color: transparent;
+    font-size: smaller;
+}
+.form select:focus-visible{
+    outline: none;
+}
+.form button{
+    border: none;
+    background-color: none;
+    cursor: pointer;
+}
+
+.weather{
+    margin-top: 20px;
+}
+
+.weather h1{
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.tempo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    color: #ffffff;
+    background-color: rgb(103, 72, 241);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.tempo #tempo_valor{
+    font-weight: bolder;
+    font-size: 50px;
+    line-height: 55px;
+}
+.tempo #clima{
+    font-weight: 500;
+}
+
+.infos{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border-radius: 8px;
+    padding: 4px 12px;
+    gap: 10px;
+    background-color: rgb(197, 226, 252);
+}
+
+.info h2{
+    font-size: 23px;
+    font-weight: 600;
+}
+.info i{
+    text-align: center;
+    font-size: 20px;
+    width: 20%;
+}
