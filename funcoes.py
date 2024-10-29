@@ -7,7 +7,14 @@ link = f"https://api.openweathermap.org/data/2.5/weather?q={cidade}&appid={api}&
 requisicao = requests.get(link)
 requisicao_dic = requisicao.json()
 name = requisicao_dic['name']
-descricao = requisicao_dic['weather'][0]['description']
-temperatura = requisicao_dic['main']['temp'] - 273.15
-print(descricao, f"{int(temperatura)}°c em {name}")
-print(requisicao_dic)
+weather_info = {
+ "nome": requisicao_dic['name'],
+  "temp_atual": requisicao_dic['main']['temp'],
+  "descricao":requisicao_dic['weather'][0]['description'],
+  "temp_max": requisicao_dic['main']['temp_max'],
+  "temp_min": requisicao_dic['main']['temp_min'],
+  "umidade": requisicao_dic['main']['humidity'],
+  "vento": requisicao_dic['wind']['speed'],
+  "icone": requisicao_dic['weather'][0]['icon']
+}
+print(weather_info)
