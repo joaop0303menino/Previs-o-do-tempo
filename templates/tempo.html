@@ -21,48 +21,55 @@
             </select>
             <button type="submit"><i class="bi bi-search"></i></button>
         </div>
-        <div class="weather">
-            <h1 id="nome">São Paulo</h1>
-            <div class="tempo">
-                <div>
-                    <img src="" alt="">
-                </div>
-                <div>
-                    <p id="tempo_valor">29 <sup>C°</sup></p>
-                    <p id="clima">chuvoso</p>
-                </div>
-            </div>
-            <div class="infos">
-                <div class="info">
-                    <i class="bi bi-thermometer-sun"></i>
-                    <div>
-                        <h2>temp.max</h2>
-                        <p id="clima-max">30<sup>C°</sup></p>
+        {% if weather_info %}
+            {% if 'erro' in weather_info %}
+                <img src="" alt="">
+            {% else %}
+
+                <div class="weather">
+                    <h1 id="nome">{{weather_info.nome}}</h1>
+                    <div class="tempo">
+                        <div>
+                            <img src="" alt="">
+                        </div>
+                        <div>
+                                <p id="tempo_valor">{{weather_info.temp_atual}}<sup>C°</sup></p>
+                            <p id="clima">{{weather_info.descricao}}</p>
+                        </div>
+                    </div>
+                    <div class="infos">
+                        <div class="info">
+                            <i class="bi bi-thermometer-sun"></i>
+                            <div>
+                                <h2>temp.max</h2>
+                                <p id="clima-max">{{weather_info.temp_max}}<sup>C°</sup></p>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <i class="bi bi-thermometer-snow"></i>
+                            <div>
+                                <h2>temp.min</h2>
+                                <p id="clima-min">{{weather_info.temp_min}}<sup>C°</sup></p>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <i class="bi bi-droplet-fill"></i>
+                            <div>
+                                <h2>umidade</h2>
+                                <p id="umidade">{{weather_info.umidade}}</p>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <i class="bi bi-cloud-haze2"></i>
+                            <div>
+                                <h2>vento</h2>
+                                <p id="vento">{{weather_info.vento}}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="info">
-                    <i class="bi bi-thermometer-snow"></i>
-                    <div>
-                        <h2>temp.min</h2>
-                        <p id="clima-min">30<sup>C°</sup></p>
-                    </div>
-                </div>
-                <div class="info">
-                    <i class="bi bi-droplet-fill"></i>
-                    <div>
-                        <h2>umidade</h2>
-                        <p id="umidade">30%</p>
-                    </div>
-                </div>
-                <div class="info">
-                    <i class="bi bi-cloud-haze2"></i>
-                    <div>
-                        <h2>vento</h2>
-                        <p id="vento">30%</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+            {% endif %}
+        {% endif %}
     </div>
 </body>
 
