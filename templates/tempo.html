@@ -11,16 +11,18 @@
 
 <body>
     <div class="container">
-        <div class="form">
-            <i class="bi bi-geo-alt-fill"></i>
-            <label for="">Escolha a cidade: </label>
-            <select name="" id="">
-                <option value="">SP</option>
-                <option value="">RJ</option>
-                <option value="">MG</option>
-            </select>
-            <button type="submit"><i class="bi bi-search"></i></button>
-        </div>
+        <form method="POST">
+            <div class="form">
+                <i class="bi bi-geo-alt-fill"></i>
+                <label for="">Escolha a cidade: </label>
+                <select name="city" id="city">
+                    <option value="sao paulo">SP</option>
+                    <option value="rio de janeiro">RJ</option>
+                    <option value="minas gerais">MG</option>
+                </select>
+                <button type="submit"><i class="bi bi-search"></i></button>
+            </div>
+        </form>
         {% if weather_info %}
             {% if 'erro' in weather_info %}
                 <img src="" alt="">
@@ -30,7 +32,7 @@
                     <h1 id="nome">{{weather_info.nome}}</h1>
                     <div class="tempo">
                         <div>
-                            <img src="" alt="">
+                            <img src="http://openweathermap.org/img/wn/{{ weather_info.icone }}.png" alt="">
                         </div>
                         <div>
                                 <p id="tempo_valor">{{weather_info.temp_atual}}<sup>C°</sup></p>
