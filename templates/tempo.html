@@ -25,7 +25,8 @@
         </form>
         {% if weather_info %}
             {% if 'erro' in weather_info %}
-            <img src="" alt="">
+            <img class="erro-img" src="/static/imgerro.png" alt="">
+            <h3>Verifique a conexão com Wi-Fi</h3>
         {% else %}
             <div class="weather">
                 <h1 id="nome">{{weather_info.nome}}</h1>
